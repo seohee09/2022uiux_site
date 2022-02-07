@@ -38,12 +38,12 @@
             justify-content: space-between;
         }
         .logo{display: flex;height: 120px}
-        .menu ul{display: flex;}
-        .menu ul li{
-        display: flex;justify-content: center;align-items: center;
-        height: 100%;padding:0 10px;
-        }
-
+        .menu{width: 700px;display: flex;justify-content: center;
+            align-items: center;}
+      
+        .menu li{display: flex;width: 500px;justify-content: center;}
+        .icon{display: flex;align-items: center;}
+        .icon img{width: 90px;height: 45px;}
 
         header{height: 160px;}
       
@@ -60,7 +60,7 @@
             height: 140px;background: white;align-items:center;margin-bottom: 30px;
         }
         .secBannerWrap ul{display: flex;}
-        .title{color:white;}
+        .title{}
 
         /* section */
         .contentWrap>ul>li{
@@ -107,6 +107,32 @@
 
         .contentWrap>ul>li:nth-child(1) .next{right: 0;;}
         .contentWrap>ul>li:nth-child(1) .prev{left: 0;}
+        
+        .Wrap{
+            display: flex;justify-content: space-between;
+            height: 140px;align-items:center;
+           padding: 0 0 50px 0
+            
+        }
+
+        .sceduleWrap{width: 1200px;margin: 0 auto;
+            display: flex;
+            justify-content: space-between;}
+        .sceduleWrap ul{
+            width: 300px;height: 60px;
+            background-color: #fff;display: flex;justify-content: space-between;
+        }
+        .sceduleWrap ul li{
+            text-align:center;
+            padding: 18px 18px;
+            }
+        ul.guide{
+        width: 895px;
+        }
+        ul.guide li{display: flex;padding: 18px 10px;font-size: 15px}
+        ul.guide a{width: 40px;height: 60px;display: flex;}
+        ul.guide a img{width: 40px;height: 60px;}
+        
 </style>
 <script>
     $(document).ready(function(){
@@ -149,17 +175,19 @@
 </div>
 <div class="menuWrap1">
     <div class="menuWrap2">
-    <div class="menu">
+   
         <ul class="logo">
             <img src="images/logo.png" alt="">
         </ul>
-        </div>
-    <ul>
+    <ul class="menu">
    <li><a href="#">대학소개</a></li>
    <li><a href="#">학과소개</a></li>
    <li><a href="#">학사안내</a></li>
    <li><a href="#">대학생활</a></li>
    <li><a href="#">학생지원센터</a></li>
+</ul>
+<ul class="icon">
+    <img src="images/icon.PNG" alt="">
 </ul>
 </div>
 </div>
@@ -205,6 +233,21 @@
         <li>7</li>
         <li>8</li>
     </ul>
+</div>
+<div class="Wrap">
+<div class="sceduleWrap">
+ <ul>
+     <li>학사일정</li>
+     <li><img src="images/Vector 8.png" alt=""></li>
+     <li>2022.03</li>
+     <li><img src="images/Vector 7.png" alt=""></li>
+ </ul>
+ <ul class="guide">
+     <li>2021 - 2학기 성적 열람 및 상담신청</li>
+     <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
+     <a><img src="images/icon2.PNG" alt=""></a>
+ </ul>
+</div>
 </div>
 </section>
 
