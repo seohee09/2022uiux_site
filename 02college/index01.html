@@ -57,10 +57,21 @@
         }
         .container{width: 1200px;margin: 0 auto;}
         .titleWrap{display: flex;justify-content: space-between;
-            height: 140px;background: white;align-items:center;margin-bottom: 30px;
+            height: 140px;align-items:center;margin-bottom: 30px;
         }
-        .secBannerWrap ul{display: flex;}
-        .title{}
+        .secBanner{}
+        .secBannerWrap ul{display: flex;align-items: center;text-align: center;}
+        .secBannerWrap ul li{width:120px;height: 150px;
+        }
+        .secBanner img{margin: 0 auto;}
+        .secBanner h3{color:white;font-size: 18px;text-align: center;margin-top:10px;}
+
+        .title{padding : 10px 0 0 10px;color:white}
+        .title h3{font-size: 30px;margin-bottom: 5px;}
+        .title h3 span{color:blue;}
+        .title h2{font-size: 50px;}
+        
+
 
         /* section */
         .contentWrap>ul>li{
@@ -77,7 +88,7 @@
         width: 75%;
         }
 
-        .contentWrap>ul>li:nth-child(1){background-color:aqua;}
+        .contentWrap>ul>li:nth-child(1){}
         .contentWrap>ul>li:nth-child(2){background-image: url(images/배경03.png);}
         .contentWrap>ul>li:nth-child(3){background-color: #00163B;}
         .contentWrap>ul>li:nth-child(4){background-image: url(images/5.png);}
@@ -114,16 +125,40 @@
            padding: 0 0 50px 0
         }
         
-       .library li{display: flex;justify-content: center;padding : 40px 10px 0 0}
+       .library{padding: 20px 0 0 20px;}
+       .library p{font-weight: lighter;font-size:40px;color:white}
+       .library p span{font-weight: bold;}
+       .library h1{font-weight: lighter;font-size: 18px;
+        color:white;margin-top: 20px;
+    }
+
+      .buttonWrap{width: 170px;height: 42px;
+        display: flex;justify-content: center;align-items: center;margin-top: 20px;
+        margin-left: 20px;opacity: 90%;stroke: #fff;background-color: #281A00;
+    }
+      .buttonWrap li{}
+      .buttonWrap li a{color:white;font-weight: bold;}
+
+      .hotlink{color:white;padding:20px 0 0 20px}
+
+      
+      .noticetitle{color:white;margin-top: 20px;margin-left: 20px;}
+      .noticetitle h1:after{
+             content:"";display: block;width:260px;height: 2px;
+             background: #fff;position: absolute;top:70px
+         }
+    
+      .notice{color:white;margin-top: 30px;font-size: 14px;}
+      .notice p{padding:10px 0 0 10px}
+      .notice p span{float: right;margin-right: 5px;}
 
 
-
-
-
-
-
-
-
+      .newswrap{}
+      .newswrap h3{padding: 20px 0 0 20px;}
+      .newswrap img{padding: 20px 0 0 10px;}
+      .newswrap p{float:right;padding: 30px 10px 0 0;}
+      .sns{width: 140px;height: 50px;float:right;
+        padding: 10px 0px 0 0;}
 
 
 
@@ -133,7 +168,14 @@
 
         .video{margin-top: 90px;margin-left: 120px;}
 
-        .textbox{margin-left: 30px;margin-top: 30px;}
+        .textbox{padding: 50px 0 0 50px; color:#FD503F;font-size:35px}
+        .textbox p span{font-weight:bold;}
+
+        .btn{width: 170px;height: 40px;background-color:#F23F31;
+        display: flex;justify-content: center;align-items: center;margin-top: 20px;
+        margin-left: 45px;}
+
+        .btn li a{color:white;font-weight: bold;}
 
         .sceduleWrap{width: 1200px;margin: 0 auto;
             display: flex;
@@ -167,7 +209,7 @@
             myslider1.goToPrevSlide()
         });
     });
-</script>
+    </script>
 </style>
 </head>
 <body>
@@ -216,16 +258,29 @@
 <section class="section">
 <div class="container titleWrap">
     <div class="title">
-        <h3>함께 나누며 세상을 이끌어</h3>
-        <h2>세계로 향하는 한국대학교</h2>
+        <h3>건학이념 <span> '인간존중의 대학'</span></h3>
+        <h2>가톨릭대학교</h2>
     </div>
     <div class="secBannerWrap">
+        <div class="secBanner">
         <ul>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
+            <li><img src="images/Group 1.png" alt="">
+            <h3>입학절차안내</h3>
+        </li>
+            <li><img src="images/Group 2.png" alt="">
+            <h3>입학설명회</h3>
+        </li>
+            <li><img src="images/Group 3.png" alt="">
+            <h3>장학제도</h3>
+        </li>
+            <li><img src="images/Group 5.png" alt="">
+            <h3>증명서발급</h3>
+        </li>
+
+            
+          
         </ul>
+    </div>
     </div>
 </div>
 <div class="container contentWrap">
@@ -233,7 +288,11 @@
         <li>
             <!-- size 900*450 -->
        <ul class="slider">
-           <li><img src="images/slide01.png" alt=""></li>
+           <li class="conWrap">
+            <img src="images/slide01.png" alt="">
+            <h3 class="txt">한국에서 시작하는 새로운 꿈</h3>
+        </li>
+
            <li><img src="images/slide02.png" alt=""></li>
            <li><img src="images/slide03.png" alt=""></li>
        </ul>
@@ -246,15 +305,55 @@
        </li>
         <li>
             <ul class="library">
-            <li><img src="images/text02.png" alt=""></li>
-            <li><img src="images/text03.png" alt=""></li>
+            <p><span>APP</span>으로<br>
+                <span>스마트 도서관</span><br>
+                바로 이용하자!<br></p>
 
+            <h1>모바일 열람증은<br>
+                도서관 자료실 / 도서대출 등이<br>
+                사용할 수 있습니다.<span></span>
+            </h1>
         </ul>
+            <ul class="buttonWrap">
+               <li><a href="#">자세히 보기 ‣</a></li> 
+            </ul>
 
         </li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li>
+            <ul class="hotlink">
+                <h1>HOT LINK</h1>
+            </ul>
+        </li>
+        <li>
+            <ul class="noticetitle">
+                <h1>공지사항</h1>
+            </ul>
+            <ul class="notice">
+             <p>- [공지]한국대학교 웹진...<span>2021.06.17</span></p>
+             <p>- [보도]우수대학교 선정수상<span>2021.06.12</span></p>
+             <p>- [공지]대학입시 설명회<span>2021.06.05</span></p>
+             <p>- [공지]2021년 2학기 성적...<span>2021.05.14</span></p>
+
+            </ul>
+
+        </li>
+        <li>
+            <ul class="newswrap">
+                <h3>SNS NEWS</h3>
+                <img src="images/학교01.jpg" alt="">
+                <p>한국대학교는<br>
+                2021학년도 신입생<br>
+                입학식을 3월 2일(수)<br>
+                 본교 종합체육관...</p>
+
+            </ul>
+            <ul class="sns">
+                 <a href="#"><img src="images/facebook.png" alt=""></a>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+                 <a href="#"><img src="images/google.png" alt=""></a>
+                 <a href="#"><img src="images/youtube.png" alt=""></a>
+                </ul>
+        </li>
         <li>
             <ul class="campus">
                    <h1>캠퍼스 투어</h1>
@@ -263,14 +362,18 @@
 
         <li>
             <ul class="video">
-                <li><img src="images/Group 4.png" alt=""></li>
+                <li><a href="https://www.youtube.com/watch?v=XWthuhPPWfU" class="modal" title="youtube"><img src="images/Group 4.png" alt=""></a></li>
             </ul>
         </li>
         <li>
          <ul class="textbox">
-             <li><img src="images/text04.png" alt=""></li>
-
+            <p><span>2022년 신·편입생 2차모집<br></span>
+                 2022.07.01 ~ 7.10</br>
+             </p>
          </ul>
+         <ul class="btn">
+             <li><a href="#">입학사전예약 ‣</a></li>
+        </ul>
         </li>
     </ul>
 </div>
