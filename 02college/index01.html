@@ -71,6 +71,24 @@
         .title h3 span{color:blue;}
         .title h2{font-size: 50px;}
         
+        .slider li.conWrap h3.text{position: absolute;font-size: 40px;
+            color:black;transform: translate(20%,70%);
+        }
+        .slider li.conWrap h3.text span{
+            font-size:55px;color:#1651B7;
+            font-weight:bolder
+        }
+       .slider li.conWrap a{position: absolute; background-color: #192D4E;
+        top: 240px;left: 100px;color:white;width: 168px;height: 40px;
+        display: flex;
+        text-align: center;justify-content: center;align-items: center;
+       
+    }
+
+
+
+
+
 
 
         /* section */
@@ -97,18 +115,13 @@
         .contentWrap>ul>li:nth-child(7){background-image:url(images/학교03.png)}
         .contentWrap>ul>li:nth-child(8){background-image: url(images/배경04.png);;}
 
-        .bx-wrapper {
-            -moz-box-shadow: 0 0 0 transparent;
-            -webkit-box-shadow: 0 0 0 transparent;
-            box-shadow: 0 0 0 transparent;
-            border: 0 none;
-            margin-bottom: 0;
-        }
         .bx-wrapper .bx-pager{
-            bottom: 30px;
+            bottom: 200px; left:400px;
         }
 
 
+
+        /* <li>1</li> */
         .contentWrap>ul>li:nth-child(1) .next,
         .contentWrap>ul>li:nth-child(1) .prev{
          position: absolute;top: 50%;
@@ -116,7 +129,7 @@
          cursor : pointer;
         }
 
-        .contentWrap>ul>li:nth-child(1) .next{right: 0;;}
+        .contentWrap>ul>li:nth-child(1) .next{right: 0;}
         .contentWrap>ul>li:nth-child(1) .prev{left: 0;}
         
         .Wrap{
@@ -125,6 +138,7 @@
            padding: 0 0 50px 0
         }
         
+         /* <li>2</li> */
        .library{padding: 20px 0 0 20px;}
        .library p{font-weight: lighter;font-size:40px;color:white}
        .library p span{font-weight: bold;}
@@ -139,9 +153,15 @@
       .buttonWrap li{}
       .buttonWrap li a{color:white;font-weight: bold;}
 
+
+
+       /* <li>3</li> */
       .hotlink{color:white;padding:20px 0 0 20px}
 
-      
+
+
+    
+       /* <li>4</li> */
       .noticetitle{color:white;margin-top: 20px;margin-left: 20px;}
       .noticetitle h1:after{
              content:"";display: block;width:260px;height: 2px;
@@ -153,6 +173,8 @@
       .notice p span{float: right;margin-right: 5px;}
 
 
+
+       /* <li>5</li> */
       .newswrap{}
       .newswrap h3{padding: 20px 0 0 20px;}
       .newswrap img{padding: 20px 0 0 10px;}
@@ -162,21 +184,48 @@
 
 
 
+         /* <li>6</li> */
        .campus {background-color: black ;opacity: 70%;width: 300px;height: 33px;margin-top: 193px;}
        .campus h1{color:white;display: flex;justify-content: center; height: 30px;
         ;align-items:center;font-size: 18px;}
 
+
+
+         /* <li>7</li> */
         .video{margin-top: 90px;margin-left: 120px;}
+
+
+
+         /* <li>8</li> */
+         .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #fff;
+            -webkit-box-shadow: 0 0 0 #fff;
+            box-shadow: 0 0 0 #fff;
+            border: 0;
+        }
+        .sliderWrap .slide .textbox{}
+        .sliderWrap .textbox{
+            position: absolute;
+            bottom: 100px;left:0;
+            text-align: left;
+        }
+        .sliderWrap .btn{
+           position: absolute;
+            bottom: 50px;left:0;
+        }
 
         .textbox{padding: 50px 0 0 50px; color:#FD503F;font-size:35px}
         .textbox p span{font-weight:bold;}
 
         .btn{width: 170px;height: 40px;background-color:#F23F31;
-        display: flex;justify-content: center;align-items: center;margin-top: 20px;
+        display: flex;justify-content: center;align-items: center;
         margin-left: 45px;}
 
         .btn li a{color:white;font-weight: bold;}
 
+
+
+         /* 학사일정 bxslider */
         .sceduleWrap{width: 1200px;margin: 0 auto;
             display: flex;
             justify-content: space-between;}
@@ -188,6 +237,10 @@
             text-align:center;
             padding: 18px 18px;
             }
+            .rightBtn,.leftBtn{
+        
+           }
+         
         ul.guide{
         width: 895px;
         }
@@ -209,6 +262,29 @@
             myslider1.goToPrevSlide()
         });
     });
+    
+    
+    $(document).ready(function(){
+            var slide = $(".slider").bxSlider({
+                auto:true,
+                controls:false
+            });
+
+        }); 
+        
+
+        $(document).ready(function(){
+       var myslide = $(".slide").bxSlider({controls:false});
+      
+       $(".rightBtn").click(function(){
+           myslide.goToRightBtnSlide();
+       });
+       $(".leftBtn").click(function(){
+           myslide.goToLeftBtnSlide();
+       });
+
+    });
+    
     </script>
 </style>
 </head>
@@ -289,13 +365,26 @@
             <!-- size 900*450 -->
        <ul class="slider">
            <li class="conWrap">
+            <h3 class="text">가톨릭 정신에 바탕을 둔<br>
+            <span>진리,사랑,봉사</span></h3>
+            <a href="#">자세히 보기 ‣</a>
             <img src="images/slide01.png" alt="">
-            <h3 class="txt">한국에서 시작하는 새로운 꿈</h3>
+            
         </li>
-
-           <li><img src="images/slide02.png" alt=""></li>
-           <li><img src="images/slide03.png" alt=""></li>
+           <li class="conWrap">
+            <h3 class="text">가톨릭 정신에 바탕을 둔<br>
+            <span>진리,사랑,봉사</span></h3>
+            <a href="#">자세히 보기 ‣</a>
+           <img src="images/slide02.png" alt="">
+        
+            <li class="conWrap">
+            <h3 class="text">가톨릭 정신에 바탕을 둔<br>
+           <span>진리,사랑,봉사</span></h3>
+           <a href="#">자세히 보기 ‣</a>
+           <img src="images/slide03.png" alt="">
+            </li>
        </ul>
+
        <div class="prev">
            <img src="images/arrow01.png" alt="">
        </div>
@@ -304,6 +393,7 @@
        </div>
        </li>
         <li>
+            
             <ul class="library">
             <p><span>APP</span>으로<br>
                 <span>스마트 도서관</span><br>
@@ -365,26 +455,71 @@
                 <li><a href="https://www.youtube.com/watch?v=XWthuhPPWfU" class="modal" title="youtube"><img src="images/Group 4.png" alt=""></a></li>
             </ul>
         </li>
+        
         <li>
-         <ul class="textbox">
-            <p><span>2022년 신·편입생 2차모집<br></span>
-                 2022.07.01 ~ 7.10</br>
-             </p>
-         </ul>
-         <ul class="btn">
-             <li><a href="#">입학사전예약 ‣</a></li>
-        </ul>
-        </li>
+            <div class="sliderWrap">
+                <ul class="slide">
+                    <li><a href="#">
+                        <img src="images/배경04.png" alt=""></a>
+                        <ul class="textbox">
+                            <p><span>2022년 신·편입생 2차모집<br></span>
+                                 2022.07.01 ~ 7.10</br>
+                             </p>
+                         </ul>
+                         <ul class="btn">
+                             <li><a href="#">입학사전예약 ‣</a></li>
+                         </li>
+                        </ul>
+                   
+                    <li><a href="#">
+                        <img src="images/배경04.png" alt=""></a>
+                        <ul class="textbox">
+                            <p><span>2022년 신·편입생 2차모집<br></span>
+                                 2022.07.01 ~ 7.10</br>
+                             </p>
+                         </ul>
+                         <ul class="btn">
+                             <li><a href="#">입학사전예약 ‣</a></li>
+                        </ul>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/배경04.png" alt=""></a>
+                        <ul class="textbox">
+                            <p><span>2022년 신·편입생 2차모집<br></span>
+                                 2022.07.01 ~ 7.10</br>
+                             </p>
+                         </ul>
+                         <ul class="btn">
+                             <li><a href="#">입학사전예약 ‣</a></li>
+                        </ul>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/배경04.png" alt=""></a>
+                        <ul class="textbox">
+                            <p><span>2022년 신·편입생 2차모집<br></span>
+                                 2022.07.01 ~ 7.10</br>
+                             </p>
+                         </ul>
+                         <ul class="btn">
+                             <li><a href="#">입학사전예약 ‣</a></li>
+                        </ul>
+                    </a></li>
+                </ul>
     </ul>
 </div>
 <div class="Wrap">
 <div class="sceduleWrap">
  <ul>
      <li>학사일정</li>
-     <li><img src="images/Vector 8.png" alt=""></li>
+     <div class="leftBtn">
+        <img src="images/Vector 8.png" alt="">
+    </div>
      <li>2022.03</li>
-     <li><img src="images/Vector 7.png" alt=""></li>
- </ul>
+     <div class="rightBtn">
+    <img src="images/Vector 7.png" alt="">
+</div>
+</ul>
+
  <ul class="guide">
      <li>2021 - 2학기 성적 열람 및 상담신청</li>
      <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
