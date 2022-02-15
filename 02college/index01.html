@@ -115,9 +115,7 @@
         .contentWrap>ul>li:nth-child(7){background-image:url(images/학교03.png)}
         .contentWrap>ul>li:nth-child(8){background-image: url(images/배경04.png);;}
 
-        .bx-wrapper .bx-pager{
-            bottom: 200px; left:400px;
-        }
+   
 
 
 
@@ -136,6 +134,10 @@
             display: flex;justify-content: space-between;
             height: 140px;align-items:center;
            padding: 0 0 50px 0
+        }
+        
+        .bx-wrapper .bx-pager{
+            bottom: 30px; left:0px;
         }
         
          /* <li>2</li> */
@@ -224,6 +226,9 @@
         .btn li a{color:white;font-weight: bold;}
 
 
+        .sliderWrap .bx-wrapper .bx-pager{
+            bottom: 200px; left:350px;
+        }
 
          /* 학사일정 bxslider */
         .sceduleWrap{width: 1200px;margin: 0 auto;
@@ -237,9 +242,7 @@
             text-align:center;
             padding: 18px 18px;
             }
-            .rightBtn,.leftBtn{
         
-           }
          
         ul.guide{
         width: 895px;
@@ -248,6 +251,38 @@
         ul.guide a{width: 40px;height: 60px;display: flex;}
         ul.guide a img{width: 40px;height: 60px;}
         
+
+        .footerWrap{background-color:white;}
+         .footerTopWrap{background-color: #525252;}
+         .footerWrap .footerTop{width: 1200px;margin: 0 auto}
+
+         .footerWrap .footerMenu{float: left;}
+         .footerWrap .footerMenu li{float: left;position: relative;color: #000;}
+         .footerWrap .footerMenu li:after{
+             content:"";display: block;width: 1px;height: 13px;
+             background: #fff;position: absolute;
+             top:13px
+         }
+         .footerWrap .footerMenu li:first-child:after{
+             display: none;
+         }
+         .footerWrap .footerMenu li a{
+             display: block;line-height: 16px;text-align: center;
+             font-size: 13px;color:#fff;padding: 13px 15px;
+             letter-spacing: -0.075em;
+         }
+         .footerWrap .footerMenu li:first-child a{padding-left: 0;}
+
+         .footerWrap .top{float: right;}
+
+         .footerWrap .footerBottom{width: 1200px;margin: 0 auto;padding: 20px 0;}
+         .footerWrap .footerBottom img{float: left;}
+         .footerWrap address{
+         font-style: normal;color:#a2a2a2;
+         font-size:12px;
+         width: 900px;float:right;top:30px
+
+         }
 </style>
 <script>
     $(document).ready(function(){
@@ -511,23 +546,59 @@
 <div class="sceduleWrap">
  <ul>
      <li>학사일정</li>
-     <div class="leftBtn">
-        <img src="images/Vector 8.png" alt="">
-    </div>
-     <li>2022.03</li>
+
      <div class="rightBtn">
-    <img src="images/Vector 7.png" alt="">
-</div>
+        <img src="images/Vector 8.png" alt="">
+       </div>
+     <li>2022.03</li>
+     <div class="leftBtn">
+        <img src="images/Vector 7.png" alt="">
+        </div>
 </ul>
 
  <ul class="guide">
      <li>2021 - 2학기 성적 열람 및 상담신청</li>
      <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
-     <a><img src="images/icon2.PNG" alt=""></a>
+     <img src="images/icon2.PNG" alt="">
  </ul>
 </div>
 </div>
 </section>
+
+
+<footer class="footerWrap"> 
+    <div class="footerTopWrap">
+        <div class="footerTop clearfix"> 
+            <nav class="footerMenu">
+                <ul class="clearfix">
+                    <li><a href="#">대학정보공시</a></li>
+                    <li><a href="#">예결산공고</a></li>
+                    <li><a href="#">입찰공고</a></li>
+                    <li><a href="#">채용공고</a></li>
+                    <li><a href="#">청탁금지법</a></li>
+                    <li><a href="#">원격지원</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <img src="images/logo.png" alt="">
+         
+            <address>
+                성심교정 14662 경기도 부천시 지봉로 43 (TEL) 02-2164-4114 <br>
+                성의교정 06591 서울특별시 서초구 반포대로 222 (TEL) 02-2258-7114 <br>
+                성신교정 03083 서울특별시 종로구 창경궁로 296-12 (TEL) 02-740-9714<br>
+                Copyright © The Catholic University of Korea All rights reserved.
+            </address>
+        </div>
+    </div>
+
+</footer>
 
 </body>
 </html>
