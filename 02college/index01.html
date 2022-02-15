@@ -230,28 +230,32 @@
             bottom: 200px; left:350px;
         }
 
-         /* 학사일정 bxslider */
-        .sceduleWrap{width: 1200px;margin: 0 auto;
-            display: flex;
-            justify-content: space-between;}
+         /* 학사일정 */
+        .sceduleWrap{width: 300px;margin: 0 auto;
+            display: flex;}
         .sceduleWrap ul{
             width: 300px;height: 60px;
-            background-color: #fff;display: flex;justify-content: space-between;
+            background-color: #fff;display: flex;justify-content: center;
         }
-        .sceduleWrap ul li{
+        .sceduleWrap ul .text{
             text-align:center;
-            padding: 18px 18px;
+            margin: 18px 40px 0 0;
             }
+            .sceduleWrap ul .text1{
+            text-align:center;
+            padding: 18px 30px;
+            }
+        .sceduleWrap ul a{height: 20px;margin: 18px 0 0 0;}
         
-         
-        ul.guide{
-        width: 895px;
-        }
-        ul.guide li{display: flex;padding: 18px 10px;font-size: 15px}
-        ul.guide a{width: 40px;height: 60px;display: flex;}
-        ul.guide a img{width: 40px;height: 60px;}
-        
+        /* bxslider */
+        .guide{
+        width: 900px;height: 60px;
+       }
 
+        .guide li{padding: 18px 10px;font-size: 15px}
+    
+
+        /* footer */
         .footerWrap{background-color:white;}
          .footerTopWrap{background-color: #525252;}
          .footerWrap .footerTop{width: 1200px;margin: 0 auto}
@@ -300,17 +304,16 @@
     
     
     $(document).ready(function(){
-            var slide = $(".slider").bxSlider({
+            var slide = $(".slide").bxSlider({
                 auto:true,
                 controls:false
             });
 
         }); 
-        
 
         $(document).ready(function(){
-       var myslide = $(".slide").bxSlider({controls:false});
-      
+       var myslide = $(".guide").bxSlider({controls:false, pager:false});
+
        $(".rightBtn").click(function(){
            myslide.goToRightBtnSlide();
        });
@@ -545,23 +548,28 @@
 <div class="Wrap">
 <div class="sceduleWrap">
  <ul>
-     <li>학사일정</li>
-
-     <div class="rightBtn">
-        <img src="images/Vector 8.png" alt="">
-       </div>
-     <li>2022.03</li>
-     <div class="leftBtn">
-        <img src="images/Vector 7.png" alt="">
-        </div>
+     <li class="text">학사일정</li>
+        <a href="#"><img src="images/Vector 8.png" alt=""></a>
+     <li class="text1">2022.03</li>
+       <a href="#"><img src="images/Vector 7.png" alt=""></a>
 </ul>
-
- <ul class="guide">
-     <li>2021 - 2학기 성적 열람 및 상담신청</li>
-     <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
-     <img src="images/icon2.PNG" alt="">
- </ul>
 </div>
+
+<ul class="guide">
+    <li>2021 - 2학기 성적 열람 및 상담신청</li>
+    <li>
+        <ul class="slider3st">
+            <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
+            <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
+            <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
+        </ul>
+
+        <img src="images/icon2.PNG" alt="">
+        <img src="images/icon3.PNG" alt="">
+
+    </ul>
+
+
 </div>
 </section>
 
