@@ -311,17 +311,15 @@
 
         }); 
 
-        $(document).ready(function(){
-       var myslide = $(".guide").bxSlider({controls:false, pager:false});
+      
+       var myslide = $(".slider3st").bxSlider({mode:'vertical', controls:false, pager:false});
 
        $(".rightBtn").click(function(){
-           myslide.goToRightBtnSlide();
+         myslider.goToRightBtnSlide();
        });
        $(".leftBtn").click(function(){
-           myslide.goToLeftBtnSlide();
+         myslider.goToLeftBtnSlide();
        });
-
-    });
     
     </script>
 </style>
@@ -399,21 +397,22 @@
 </div>
 <div class="container contentWrap">
     <ul class="clearfix">
+
         <li>
-            <!-- size 900*450 -->
        <ul class="slider">
            <li class="conWrap">
             <h3 class="text">가톨릭 정신에 바탕을 둔<br>
             <span>진리,사랑,봉사</span></h3>
             <a href="#">자세히 보기 ‣</a>
             <img src="images/slide01.png" alt="">
-            
-        </li>
+            </li>
+
            <li class="conWrap">
             <h3 class="text">가톨릭 정신에 바탕을 둔<br>
             <span>진리,사랑,봉사</span></h3>
             <a href="#">자세히 보기 ‣</a>
            <img src="images/slide02.png" alt="">
+           </li>
         
             <li class="conWrap">
             <h3 class="text">가톨릭 정신에 바탕을 둔<br>
@@ -429,7 +428,9 @@
        <div class="next">
         <img src="images/arrow02.png" alt="">
        </div>
+       
        </li>
+
         <li>
             
             <ul class="library">

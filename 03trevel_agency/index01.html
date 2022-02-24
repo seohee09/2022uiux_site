@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body{
+        background-image: url(images/bg01.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-width: 1600px;
+    }
+    .top{
+        background-image: url(images/topbg.png);
+        background-color: #0862a1;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        top:0;
+        left: 0;
+        }
+        .container{
+            width: 980px;height: 90px;
+            margin: 0 auto;
+        }
+        .logo{position: relative;width: 210px; left: 0px;top: 20px;left: 310px;}
+        .wrap{
+            position: relative;z-index: 1;
+        }
+        .wrap form{display: flex;}
+        .wrap label{
+        display: block;width: 60px;height: 20px;
+        background-image: url(images/searchtext.jpg);
+        text-indent: -9999px;
+        position: absolute;
+        align-self: center;
+        left: 15px;
+        }
+        .wrap .inp-search{
+        width: 400px;height: 50px;
+        border-radius: 25px;
+        text-indent: 90px;
+        border: 3px solid #aaa;
+        font-size:16px;
+
+    }
+    .wrap .inp-search:focus{outline: 0 none}
+    .wrap .btn-search{
+        width: 40px;height: 40px;
+        position: absolute;
+        align-self: center;
+        right: 500px;
+        bottom: 50px;
+        border: 0 none;
+        background-image: url(images/search.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #fff;
+        text-indent:-9999px;
+        cursor: pointer;
+    }
+    
+    .tel{float:right;}
+    .sns{float:right;}
+
+        .menu_wrapper{background-color: white;border-bottom: 3px solid #0D72A6;}
+        .menu_wrapper>.menu{width: 980px;margin: 0 auto;}
+        .menu_wrapper>.menu>li{
+            float: left;width: 16.666%;
+            border-left: 1px solid #E6E6E6;
+        }
+
+        .menu_wrapper>.menu>li:last-child{
+            border-right: 1px solid #E6E6E6;
+        }
+    
+        .menu_wrapper>.menu>li>a{
+            display: block;text-align: center;line-height: 45px;color:black;
+            font-weight: bold;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <header>
+    <div class="top">
+        <div class="container"></div>
+    </div>
+
+    <div class="logo">
+        <img src="images/logo.png" alt="">
+    </div>
+
+    <div class="wrap">
+        <form action="#">
+            <label for="search">search</label>
+            <input type="text" id="search" name="search" placeholder="검색어를 입력하세요" class="inp-search">
+            <input type="submit" class="btn-search" value="button">
+        </form>
+        </div>
+        
+        <div class="tel">
+            <li>+82 02 12345678</li>
+        </div>
+
+            <div class="sns">
+            <a href="#"><img src="images/facebook.png" alt=""></a>
+            <a href="#"><img src="images/twitter.png" alt=""></a>
+            <a href="#"><img src="images/B.png" alt=""></a>
+            <a href="#"><img src="images/in.png" alt=""></a>
+            </div>
+
+        <div class="menu_wrapper"> 
+            <ul class="menu clearfix"> 
+                <li><a href="#">항공권 예매</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">부가서비스 안내</a></li>
+                <li><a href="#">모바일 탑승권</a></li>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이벤트</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
