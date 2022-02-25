@@ -11,6 +11,7 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+
     <style>
         body{min-width: 1200px;}
         .topNavWrap a{color:white}  
@@ -36,8 +37,10 @@
         .menuWrap2{width: 1200px;margin: 0 auto;
             display: flex;
             justify-content: space-between;
+            height: 120px;
+
         }
-        .logo{display: flex;height: 120px}
+        .logo{height: 80px;align-self:center}
         .menu{width: 700px;display: flex;justify-content: center;
             align-items: center;}
       
@@ -59,7 +62,7 @@
         .titleWrap{display: flex;justify-content: space-between;
             height: 140px;align-items:center;margin-bottom: 30px;
         }
-        .secBanner{}
+
         .secBannerWrap ul{display: flex;align-items: center;text-align: center;}
         .secBannerWrap ul li{width:120px;height: 150px;
         }
@@ -92,6 +95,8 @@
 
 
         /* section */
+        .contentWrap{margin-bottom: 15px;}
+
         .contentWrap>ul>li{
             float:left;width: 25%;height: 225px;
             position: relative;
@@ -106,7 +111,6 @@
         width: 75%;
         }
 
-        .contentWrap>ul>li:nth-child(1){}
         .contentWrap>ul>li:nth-child(2){background-image: url(images/배경03.png);}
         .contentWrap>ul>li:nth-child(3){background-color: #00163B;}
         .contentWrap>ul>li:nth-child(4){background-image: url(images/5.png);}
@@ -152,7 +156,6 @@
         display: flex;justify-content: center;align-items: center;margin-top: 20px;
         margin-left: 20px;opacity: 90%;stroke: #fff;background-color: #281A00;
     }
-      .buttonWrap li{}
       .buttonWrap li a{color:white;font-weight: bold;}
 
 
@@ -177,7 +180,6 @@
 
 
        /* <li>5</li> */
-      .newswrap{}
       .newswrap h3{padding: 20px 0 0 20px;}
       .newswrap img{padding: 20px 0 0 10px;}
       .newswrap p{float:right;padding: 30px 10px 0 0;}
@@ -205,7 +207,7 @@
             box-shadow: 0 0 0 #fff;
             border: 0;
         }
-        .sliderWrap .slide .textbox{}
+
         .sliderWrap .textbox{
             position: absolute;
             bottom: 100px;left:0;
@@ -231,24 +233,30 @@
         }
 
          /* 학사일정 */
-        .wrap{width: 1200px;height: 60px;display: flex;justify-content: space-between;}
-        .sceduleWrap{width: 300px;margin: 0 auto;margin-left:350px;margin-top: 15px;}
+        .wrap{width: 1200px;height: 60px;display: flex;justify-content: space-between;margin: 0 auto}
+        .sceduleWrap{width: 300px;}
         .sceduleWrap ul{
             width: 300px;height: 60px;
             background-color: #fff;display: flex;justify-content: center;
         }
         .sceduleWrap ul .text{
             text-align:center;
-            margin: 18px 40px 0 0;
+            margin: 20px 40px 0 0;
             }
             .sceduleWrap ul .text1{
             text-align:center;
-            padding: 18px 30px;
+            padding: 20px 30px;
             }
-        .sceduleWrap ul a{height: 20px;margin: 18px 0 0 0;}
+        .sceduleWrap ul a{height: 20px;margin: 20px 0 0 0;}
         
-        /* bxslider */
-        .guide{
+        /* bxslider */  
+        .wrap .guide{display: flex;height: 60px;background: white;width: 895px;}
+        .wrap .guide li:nth-child(1){width: 295px;text-align: center;align-self: center;}
+        .wrap .guide li:nth-child(2){height: 60px;position: relative;width: 600px;text-align: center;}
+
+        .wrap .guide li:nth-child(2) .sList{height: 60px;line-height: 60px;}
+        
+        /* .guide{
         width: 900px;height: 60px;margin-right: 300px;
        }
 
@@ -256,8 +264,9 @@
             padding: 18px 10px;font-size: 15px;position: absolute;
             top:1297px;width: 900px;height: 60px;margin-right:0
 
-        }
-        .bx-wrapper {
+        } */
+
+        .guide .bx-wrapper {
 	    -moz-box-shadow: 0 0 0 transparent;
 	    -webkit-box-shadow: 0 0 0 transparent;
 	    box-shadow: 0 0 0 transparent;
@@ -267,9 +276,11 @@
 
         .guide .topbtn,
         .guide .bottombtn{
-            cursor: pointer;position: absolute; top:80px;right:10px
+            cursor: pointer;position: absolute;right:0;
         }
-        .guide .topbtn{top:25px}
+        .guide img{display: block;}
+        .guide .topbtn{top:0px}
+        .guide .bottombtn{bottom:0px}
     
 
         /* footer */
@@ -318,21 +329,21 @@
             myslider1.goToPrevSlide()
         });
     
-            var slide = $(".slide").bxSlider({
-                auto:true,
-                controls:false
-            });
+        var slide = $(".slide").bxSlider({
+            auto:true,
+            controls:false
+        });
         
-        var myslide = $(".slider3st").bxSlider({
-            mode:'vertical', 
-            controls:false, 
+        var slider = $(".slider3st").bxSlider({
+            mode:'vertical',
+            controls:false,
             pager:false});
 
        $(".topbtn").click(function(){
-        myslide.goToTopbtnSlide();
+        slider.goToNextSlide();
         });
        $(".bottombtn").click(function(){
-        myslide.goToBottombtnSlide();
+        slider.goToPrevSlide();
      });
         }); 
 
@@ -367,21 +378,21 @@
 </div>
 <div class="menuWrap1">
     <div class="menuWrap2">
-   
-        <ul class="logo">
+
+        <h1 class="logo">
             <img src="images/logo.png" alt="">
+        </h1>
+        <ul class="menu">
+            <li><a href="#">대학소개</a></li>
+            <li><a href="#">학과소개</a></li>
+            <li><a href="#">학사안내</a></li>
+            <li><a href="#">대학생활</a></li>
+            <li><a href="#">학생지원센터</a></li>
         </ul>
-    <ul class="menu">
-   <li><a href="#">대학소개</a></li>
-   <li><a href="#">학과소개</a></li>
-   <li><a href="#">학사안내</a></li>
-   <li><a href="#">대학생활</a></li>
-   <li><a href="#">학생지원센터</a></li>
-</ul>
-<ul class="icon">
-    <img src="images/icon.PNG" alt="">
-</ul>
-</div>
+        <ul class="icon">
+            <img src="images/icon.PNG" alt="">
+        </ul>
+    </div>
 </div>
 </div>
 </header>
@@ -575,22 +586,23 @@
 </div>
 
 
-<ul class="guide">
+    <ul class="guide">
     <li>2021 - 2학기 성적 열람 및 상담신청</li>
     <li>
         <ul class="slider3st">
-            <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
-            <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
-            <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
-        </ul>
+            <li class="sList">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 ... </li>
+            <li class="sList">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 ... </li>
+            <li class="sList">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 ... </li>
+             </ul>
+            
         <div class="topbtn">
-            <img src="images/icon3.PNG" alt=""></div>
+             <img src="images/icon3.PNG" alt=""></div>
 
         <div class="bottombtn">
-        <img src="images/icon2.PNG" alt=""></div>
-        
+             <img src="images/icon2.PNG" alt=""></div>
 
-    </ul>
+            </li>
+        
 
 
 </div>
