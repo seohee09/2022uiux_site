@@ -231,8 +231,8 @@
         }
 
          /* 학사일정 */
-        .sceduleWrap{width: 300px;margin: 0 auto;
-            display: flex;}
+        .wrap{width: 1200px;height: 60px;display: flex;justify-content: space-between;}
+        .sceduleWrap{width: 300px;margin: 0 auto;margin-left:350px;margin-top: 15px;}
         .sceduleWrap ul{
             width: 300px;height: 60px;
             background-color: #fff;display: flex;justify-content: center;
@@ -249,10 +249,27 @@
         
         /* bxslider */
         .guide{
-        width: 900px;height: 60px;
+        width: 900px;height: 60px;margin-right: 300px;
        }
 
-        .guide li{padding: 18px 10px;font-size: 15px}
+        .guide li{
+            padding: 18px 10px;font-size: 15px;position: absolute;
+            top:1297px;width: 900px;height: 60px;margin-right:0
+
+        }
+        .bx-wrapper {
+	    -moz-box-shadow: 0 0 0 transparent;
+	    -webkit-box-shadow: 0 0 0 transparent;
+	    box-shadow: 0 0 0 transparent;
+	    border: 0 none;
+	    margin-bottom: 0;
+        }
+
+        .guide .topbtn,
+        .guide .bottombtn{
+            cursor: pointer;position: absolute; top:80px;right:10px
+        }
+        .guide .topbtn{top:25px}
     
 
         /* footer */
@@ -300,26 +317,27 @@
         $(".prev").click(function(){
             myslider1.goToPrevSlide()
         });
-    });
     
-    
-    $(document).ready(function(){
             var slide = $(".slide").bxSlider({
                 auto:true,
                 controls:false
             });
+        
+        var myslide = $(".slider3st").bxSlider({
+            mode:'vertical', 
+            controls:false, 
+            pager:false});
 
+       $(".topbtn").click(function(){
+        myslide.goToTopbtnSlide();
+        });
+       $(".bottombtn").click(function(){
+        myslide.goToBottombtnSlide();
+     });
         }); 
 
       
-       var myslide = $(".slider3st").bxSlider({mode:'vertical', controls:false, pager:false});
 
-       $(".rightBtn").click(function(){
-         myslider.goToRightBtnSlide();
-       });
-       $(".leftBtn").click(function(){
-         myslider.goToLeftBtnSlide();
-       });
     
     </script>
 </style>
@@ -546,7 +564,7 @@
                 </ul>
     </ul>
 </div>
-<div class="Wrap">
+<div class="wrap">
 <div class="sceduleWrap">
  <ul>
      <li class="text">학사일정</li>
@@ -556,6 +574,7 @@
 </ul>
 </div>
 
+
 <ul class="guide">
     <li>2021 - 2학기 성적 열람 및 상담신청</li>
     <li>
@@ -564,9 +583,12 @@
             <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
             <li>성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ... </li>
         </ul>
+        <div class="topbtn">
+            <img src="images/icon3.PNG" alt=""></div>
 
-        <img src="images/icon2.PNG" alt="">
-        <img src="images/icon3.PNG" alt="">
+        <div class="bottombtn">
+        <img src="images/icon2.PNG" alt=""></div>
+        
 
     </ul>
 

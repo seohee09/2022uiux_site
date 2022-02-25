@@ -232,15 +232,15 @@ width: 483px;height: 300px;
 .firstcontent .france, .firstcontent .japan {width: 233px;height: 240px;position: relative;}
 .firstcontent .japan{bottom:240px; left:250px}
 
-.firstcontent .france h1,
-.firstcontent .japan h1{
+.firstcontent .france h3,
+.firstcontent .japan h3{
 	font-size: 17px;background-color: #15262E;
 	color:#62AC5B;width: 234px;height: 50px;
 	display: flex;justify-content: center;align-items: center;
 }
-.france a,
-.japan a{
-	bottom:20px
+.firstcontent .france .h3 .a,
+.firstcontent .japan .h3 .a{
+ margin-left: 30px;
 }
 
 
@@ -251,20 +251,46 @@ width: 483px;height: 300px;
 	display: flex;align-items: center;
 	justify-content:center; background-color:transparent;
 	}
-.contents>li{width: 233px;height: 240px;display: block;float: left;position: relative;}
+.contents>li{width: 233px;height: 240px;display: block;float: left;
+	position: relative;}
+
 
 .contents>li:nth-child(1){margin-right: 16px;}
 .contents>li:nth-child(2){background-color: blue;margin-right: 16px;}
-.contents>li:nth-child(3){background-color: skyblue;margin-right: 16px;}
+.contents>li:nth-child(3){background-image: url(../img/img05.png);;margin-right: 16px;}
 .contents>li:nth-child(4){background-color: blue;}
 
-.contents .text{position: absolute;width: 100%;background: #529351;bottom: 0;}
+.contents .text{color:white;position: absolute;width: 100%;background: #529351;bottom: 0;width: 233px;height: 65px;}
 
+.bx-wrapper {
+	-moz-box-shadow: 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 0 transparent;
+	box-shadow: 0 0 0 transparent;
+	border: 0 none;
+	margin-bottom: 0;
+}
 .contents .next,
 .contents .prev{
- cursor : pointer; position:absolute;
+ cursor : pointer;position:absolute;top:70px;
+}
+.contents .next {right:0}
+
+.contents .nextbtn,
+.contents .prevbtn{
+ cursor : pointer;position:absolute;top:70px;
 }
 
+.contents .nextbtn {right:0}
+
+.contents .disney{position: absolute;width: 100%;background: #152630;
+	bottom: 0;width: 233px;height: 65px;color:white}
+
+.TOKYO>h4{color:white;margin-left:82px;font-size: 20px}
+.TOKYO>p{
+	background: #000;color:white;opacity: 80%
+	;margin-top: 149px;height: 65px;font-size: 14px;
+	text-align: left;
+}
 
 /* content */
 .content{width: 980px;height: 250px;margin: 0 auto;padding: 0;display: flex;align-items: center;justify-content:center;}

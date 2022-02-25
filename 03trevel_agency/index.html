@@ -16,13 +16,28 @@
 				controls:false,pager:false
 			});
 		
-			$(".next").click(function(){
-				myslider.goToNextSlide()
-			});
 			$(".prev").click(function(){
-				myslider.goToPrevSlide()
+				myslider1.goToPrevSlide()
+			});
+			$(".next").click(function(){
+				myslider1.goToNextSlide()
+			});
+
+
+			var myslider2 = $(".slidertwo").bxSlider({
+				controls:false,pager:false
+			});
+		
+			$(".prevbtn").click(function(){
+				myslider2.goToPrevbtnSlide()
+			});
+			$(".nextbtn").click(function(){
+				myslider2.goToNextbtnSlide()
 			});
 		});
+
+		
+
 		</script>
 </head>
 <body>
@@ -96,12 +111,12 @@
 					<li class = price>
 						<ul class="france">
 							<img src="img/img01.jpg" alt="">
-							<h1>프랑스 19,000,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h1>
+							<h3>프랑스 19,000,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h3>
 						</ul>
 
 						<ul class="japan">
 							<img src="img/img02.jpg" alt="">
-							<h1>일본 890,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h1>
+							<h3>일본 890,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h3>
 						</ul>
 
 					</li>
@@ -112,18 +127,21 @@
 					<li>
 				   <ul class="slider">
 					   <li class="conWrap">
-						<h3 class="text">HILLTON HOTEL (PARIS)</h3>
-						<img src="img/img03.jpg" alt="">
+						<h3 class="text">HILLTON HOTEL (PARIS)
+							★★★☆☆</h3>
+						<img src="img/img03.png" alt="">
 						</li>
 
 						<li class="conWrap">
-					    <h3 class="text">HILLTON HOTEL (PARIS)</h3>
-						<img src="img/img03.jpg" alt="">
+					    <h3 class="text">HILLTON HOTEL (PARIS)
+							★★★☆☆</h3>
+						<img src="img/img03.png" alt="">
 						</li>
 
 						<li class="conWrap">
-						<h3 class="text">HILLTON HOTEL (PARIS)</h3>
-						<img src="img/img03.jpg" alt="">
+						<h3 class="text">HILLTON HOTEL (PARIS)
+							★★★☆☆</h3>
+						<img src="img/img03.png" alt="">
 						</li>
 					</ul>
 			
@@ -134,17 +152,44 @@
 				   </li>
 
 
-                <li>2</li>
-                <li>
-					<h1>TOKYO</h1>
-					<img src="img/img05.jpg" alt="">
-					<p>20℃ 구름조금<br>
-						습도 60
+                     <li>
+					<ul class="slidertwo">
+						<li class="sliderwrap">
+						 <h3 class="disney">관광명소 (디즈니랜드)
+							★★★☆☆</h3>
+						 
+						 <img src="img/img04.png" alt="">
+						 </li>
+ 
+						 <li class="sliderwrap">
+						 <h3 class="disney">관광명소 (디즈니랜드)
+							★★★☆☆</h3>
+						 <img src="img/img04.png" alt="">
+						 </li>
+ 
+						 <li class="sliderwrap">
+						 <h3 class="disney">관광명소 (디즈니랜드)
+							★★★☆☆</h3>
+						 <img src="img/img04.png" alt="">
+						 </li>
+					 </ul>
+			 
+					<div class="prevbtn">
+					 <img src="img/control_prev.png" alt=""></div>
+					<div class="nextbtn">
+					 <img src="img/control_next.png" alt=""></div>
+					</li>
 
+                <li class="TOKYO">
+					<h4>TOKYO</h4>
+					<p>20℃ 구름조금<br>
+						습도 60% 바람 남남동 2m/s
 					</p>
-					
 				</li>
-                <li>4</li>
+
+                <li>
+					<img src="img/img06.png" alt="">
+				</li>
 
 				</div>
 
