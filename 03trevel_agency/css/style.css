@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body{min-width:1200px;}
+body{min-width:1200px;height: 1390px;}
 
 /*header*/
 .header_wrap{position: relative;}
@@ -217,7 +217,7 @@ section.content.company img{
 
 /* contentWrap */
 
-.contentWrap{display: flex;justify-content: center;align-items: center;width: 1600px;height: 600px;}
+.contentWrap{width: 980px;height: 600px;margin: 0 auto;}
 
 .contentWrap>ul>li:nth-child(1){
 width: 483px;height: 300px;
@@ -226,11 +226,15 @@ width: 483px;height: 300px;
 width: 483px;height: 300px;
 }
 
-.contentWrap>ul>li:nth-child(1){background-color: red;}
-.contentWrap>ul>li:nth-child(2){background-color:pink}
+.contentWrap>ul>li:nth-child(1){background-color: blue;}
 
-.firstcontent .france, .firstcontent .japan {width: 233px;height: 240px;position: relative;}
-.firstcontent .japan{bottom:240px; left:250px}
+.bxwrap{display: flex;}
+div.boxPager{background: green;width: 132px;height: 300px;}
+div.slide{background: yellow;width: 351px;height: 300px;}
+
+.firstcontent .france, .firstcontent .japan {width: 233px;height: 240px;position: relative}
+.firstcontent .japan{bottom:210px; left:250px}
+.firstcontent .france{top:30px;}
 
 .firstcontent .france h3,
 .firstcontent .japan h3{
@@ -256,13 +260,19 @@ width: 483px;height: 300px;
 
 
 .contents>li:nth-child(1){margin-right: 16px;}
-.contents>li:nth-child(2){background-color: blue;margin-right: 16px;}
-.contents>li:nth-child(3){background-image: url(../img/img05.png);;margin-right: 16px;}
-.contents>li:nth-child(4){background-color: blue;}
+.contents>li:nth-child(2){margin-right: 16px;}
+.contents>li:nth-child(3){background-image: url(../img/img05.png);margin-right: 16px;}
+.contents>li:nth-child(4){background-image: url(../img/img06.png);}
 
-.contents .text{color:white;position: absolute;width: 100%;background: #529351;bottom: 0;width: 233px;height: 65px;}
 
-.bx-wrapper {
+/* li 1 */
+.contents .text{
+	color:white;position: absolute;width: 100%;
+	background: #529351;bottom: 0;width: 233px;
+	height: 65px;padding: 7px 0 0 7px;font-size:17px;
+}
+
+.contents .bx-wrapper {
 	-moz-box-shadow: 0 0 0 transparent;
 	-webkit-box-shadow: 0 0 0 transparent;
 	box-shadow: 0 0 0 transparent;
@@ -281,19 +291,41 @@ width: 483px;height: 300px;
 }
 
 .contents .nextbtn {right:0}
+.text>span{color:#ffc700}
 
-.contents .disney{position: absolute;width: 100%;background: #152630;
-	bottom: 0;width: 233px;height: 65px;color:white}
+/* li 2 */
+.contents .disney{
+	position: absolute;width: 100%;background: #152630;
+	bottom: 0;width: 233px;height: 65px;color:white;
+	padding: 7px 0 0 7px;font-size:17px;
+}
+.disney>span{color:#ffc700}
 
+/* li 3 */
 .TOKYO>h4{color:white;margin-left:82px;font-size: 20px}
 .TOKYO>p{
-	background: #000;color:white;opacity: 80%
-	;margin-top: 149px;height: 65px;font-size: 14px;
-	text-align: left;
+	background: #000;color:white;opacity: 80%;
+	height: 65px;font-size: 14px;margin-top: 149px;
+	text-align: left;padding: 7px 0 0 7px
 }
+.TOKYO>p>span{font-size:20px;}
+
+/* li 4 */
+.review>p{font-size: 15px;padding: 10px 0 0 10px;}
+.review>h4{color:#44619D;font-size:13px;padding: 10px 0 0 10px;}
+.review>h5{color:#ffc700; padding: 0 0 0 10px;}
+.review>h6{
+	background-color: #44619D;height: 65px;color:white;
+	font-size:17px;padding: 5px 0 0 5px;margin-top: 60px;
+}
+.review>h6>span{color:#D2E3F8;font-size:16px}
 
 /* content */
-.content{width: 980px;height: 250px;margin: 0 auto;padding: 0;display: flex;align-items: center;justify-content:center;}
+.content{
+width: 980px;height: 250px;
+margin: 0 auto;padding: 0;
+display: flex;align-items: center;justify-content:center;
+}
 .content>li{width: 233px;height: 240px;display: block;float: left;}
 
 .content>li:nth-child(1){background-image: url(../img/img07.png);margin-right: 16px;}
@@ -301,10 +333,9 @@ width: 483px;height: 300px;
 .content>li:nth-child(3){background-image: url(../img/img09.png);margin-right: 16px;}
 .content>li:nth-child(4){background-image: url(../img/img10.png);}
 
-.content h1{color:white;margin-left: 50px;}
-.content p{color:white}
+.content h6{color:white;font-size: 20px;padding: 0px 0 0 90px;}
+.content p{color:white;text-align:center;font-size:14px}
 
-.content img{position: absolute;margin-left:20px;margin-top:10px}
-.content a{display: flex;justify-content:center;margin-top:10px;}
+.icon{position:relative;top: 25px;left:50px}
 
 
