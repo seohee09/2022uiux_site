@@ -35,7 +35,7 @@
 				myslider2.goToNextSlide()
 			});
 
-			var myslider = $(".bxwrap").bxSlider({
+			var myslider = $(".slide").bxSlider({
                 controls:false,
                 pagerCustom:".boxPager",
                 mode:"vertical"
@@ -106,36 +106,42 @@
 	</div>
 
 			<!-- content -->
-			<div class="bg" style="height: 1100px;">
+			<div class="bg">
 				<div class="contentWrap">
 					<ul class="firstcontent">
-
-					<li class="bxwrap">
-                    <div class="boxPager">
-						<a href="#" data-slide-index="0">menu1</a>
-						<a href="#" data-slide-index="1">menu2</a>
-						<a href="#" data-slide-index="2">menu3</a>
-						<a href="#" data-slide-index="3">menu4</a>
-					</div> 
-
-					<div class="slide">
-
-					</div>
-					</li>
-
-					<li class = price>
-						<div class="france">
-							<img src="img/img01.jpg" alt="">
-							<h3>프랑스 19,000,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h3>
-						</div>
-
-						<div class="japan">
-							<img src="img/img02.jpg" alt="">
-							<h3>일본 890,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h3>
-						</div>
-
-					</li>
-				</ul>
+				
+						<li class="bxwrap">
+							<div class="boxPager">
+								<a href="#" data-slide-index="0">menu1</a>
+								<a href="#" data-slide-index="1">menu2</a>
+								<a href="#" data-slide-index="2">menu3</a>
+								<a href="#" data-slide-index="3">menu4</a>
+							</div>
+				
+							<div>
+								<ul class="slide">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+								</ul>
+				
+							</div>
+						</li>
+				
+						<li class=price>
+							<div class="france">
+								<img src="img/img01.jpg" alt="">
+								<h3>프랑스 19,000,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h3>
+							</div>
+				
+							<div class="japan">
+								<img src="img/img02.jpg" alt="">
+								<h3>일본 890,000원~ <a href="#"><img src="img/Vector 5.png" alt=""></a></h3>
+							</div>
+				
+						</li>
+					</ul>
 				</div>
 
 				<div class="contents">
