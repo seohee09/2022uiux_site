@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $(".slider").bxSlider();
+    $(".nSlider").bxSlider();
 
 
     $(".lang div").click(function(){
@@ -51,11 +52,13 @@ $(document).ready(function(){
                 $(this).addClass("active");
                 $(".navbar").css({left:0})
                 $(".lang").css("display","flex");
+                $(".overLayer").show();
                 chk = false;
             }else{
                 $(this).removeClass("active");
                 $(".navbar").css({left:"-100%"})
                 $(".lang").hide();
+                $(".overLayer").hide();
                 chk = true;
             }
         })
@@ -65,6 +68,7 @@ $(document).ready(function(){
             $(".toggle").removeClass("active");
             $(".navbar").removeAttr("style");
             $(".lang").removeAttr("style");
+            $(".overLayer").hide();
         })
 
 
