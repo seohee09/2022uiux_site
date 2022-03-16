@@ -66,3 +66,12 @@
     .contents .card img{width: 50%;}
 
 }
+
+/* brandWrap */
+.container .section{width:100%;padding: 0 16px;}
+.container .section .ban{flex-wrap:wrap;}
+.container .section .ban li{
+    width: calc( ( 100% - 15px ) / 2);
+    margin-bottom: 20px;
+}
+.container .section .card{padding: 20px 0;}
