@@ -77,11 +77,22 @@
 .container .section .card{padding: 20px 0;}
 
 /* banner */
-.banner>ul{width: 100%;}
-.banner>ul>li:nth-child(1){height: 250px;order:1}
-.banner>ul>li:nth-child(2){height: 250px;order:2}
+.banner{width: 100%;}
+.banner>ul>li{width: 50%;background-position: center;background-size: cover;background-repeat: no-repeat;}
+.banner>ul>li:nth-child(1){height: 250px;width: 100%;}
+.banner>ul>li:nth-child(2){height: 250px;width: 100%;}
 
 .banner>ul>li>p{display: none;}
 
-}
 
+
+/* footer */
+footer{width: 100%;}
+footer ul{flex-wrap: wrap;}
+footer ul li{padding: 0 10px;}
+footer li:after{
+    content:"";display: block;width: 1px;height: 15px;
+    background: black;position: absolute;top:5px;right: 0
+}
+footer>p{width: 400px;padding: 0 10px;}
+}

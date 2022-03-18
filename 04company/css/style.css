@@ -20,7 +20,7 @@
 #header .navbar li:hover:after{transform:scaleX(1)}
 #header .navbar li a{height:100%;display: flex;justify-content: center;align-items: center;}
 
-#header .lang{display: flex;width: 80px;}
+#header .lang{display: flex;width: 80px;justify-content:center;align-items: center;}
 #header .lang .kor,
 #header .lang .eng
 {
@@ -108,7 +108,7 @@
 .title>h4{text-align: center;font-size:62px;margin-bottom: 20px;}
 .container{
     background: url(../image/main_brand.png) center fixed;
-    height: 1000px;background-size: cover;color:#f6f6f6;
+    background-size: cover;color:#f6f6f6;
     padding:70px 0;margin-bottom: 100px;
 }
 .container .section{width: 1240px;margin: 0 auto}
@@ -157,11 +157,11 @@ footer::before{
 }
 footer{width: 1240px;margin:0 auto;padding-bottom:27px;padding:20px 0;}
 footer ul{padding-bottom:15px;}
-footer li{float:left;padding-right:25px;font-size: 15px;}
+footer li{position: relative;;padding-right:25px;font-size: 15px;float: left;}
 footer a{display:block;}
-footer>p{color:#666;font-size: 14px;}
+footer>p{color:#666;font-size: 14px;padding: 0;}
 footer li:after{
-    content:"";display: block;width: 1px;height: 13px;
-    background: black;position: absolute;
+    content:"";display: block;width: 1px;height: 15px;
+    background: black;position: absolute;top:5px;right: 12px;
     
 }
