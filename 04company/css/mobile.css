@@ -67,7 +67,7 @@
 
 
 
-/* brandWrap */
+/* container */
 .container .section{width:100%;padding: 0 16px;}
 .container .section .ban{flex-wrap:wrap;}
 .container .section .ban li{
@@ -76,4 +76,12 @@
 }
 .container .section .card{padding: 20px 0;}
 
+/* banner */
+.banner>ul{width: 100%;}
+.banner>ul>li:nth-child(1){height: 250px;order:1}
+.banner>ul>li:nth-child(2){height: 250px;order:2}
+
+.banner>ul>li>p{display: none;}
+
 }
+
