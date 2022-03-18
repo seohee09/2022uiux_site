@@ -165,3 +165,8 @@ footer li:after{
     background: black;position: absolute;top:5px;right: 12px;
     
 }
+
+footer li:nth-child(5):after,
+footer li:last-child:after{
+    display: none;
+}
