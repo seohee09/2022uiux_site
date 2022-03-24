@@ -141,12 +141,12 @@
 .banner{width: 1240px;margin: 0 auto;margin-bottom: 100px;}
 .banner>ul{display: flex;justify-content: center;align-items: center;}
 .banner>ul>li{width: 620px;height: 315px;}
-.banner>ul>li>h4{color:white;padding: 40px 0 0 40px;font-size: 32px;}
+.banner>ul>li>h4{color:white;padding: 40px 0 0 40px;font-size: 32px;margin-bottom: 20px;}
 .banner>ul>li>h4:before{
     content:"";display: block;width: 50px;height: 5px;background: white;
     margin-bottom: 10px;
 }
-.banner>ul>li>p{display: block;color:White;padding: 20px 0 0 40px;font-size:18px;margin-bottom: 30px;}
+.banner>ul>li>p{display: block;color:White;padding: 0 0 0 40px;font-size:18px;margin-bottom: 30px;}
 .banner>ul>li>a{display: block;width: 104px;height: 36px;margin-left: 40px;}
 
 
@@ -156,17 +156,21 @@ footer::before{
     margin: 20px auto;
 }
 footer{width: 1240px;margin:0 auto;padding-bottom:27px;padding:20px 0;}
-footer ul{padding-bottom:15px;}
-footer li{position: relative;;padding-right:25px;font-size: 15px;float: left;}
+footer ul{padding-bottom:15px;width: 700px}
+footer li{position: relative;padding-right:25px;font-size: 15px;float: left;margin: 0 auto;}
+footer li:nth-child(5){color: #87B25E;}
+
+
 footer a{display:block;}
 footer>p{color:#666;font-size: 14px;padding: 0;}
 footer li:after{
     content:"";display: block;width: 1px;height: 15px;
-    background: black;position: absolute;top:5px;right: 12px;
-    
+    background: black;position: absolute;top:5px;right: 12px;   
 }
-
 footer li:nth-child(5):after,
 footer li:last-child:after{
     display: none;
 }
+footer>.sns{float:right;width: 270px;height: 46px;padding: 0;}
+footer>.sns>ul{width:300px;}
+footer>.sns>ul>li:after{display: none;}

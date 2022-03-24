@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    $(".slider").bxSlider();
-    $(".nSlider").bxSlider();
 
 
     $(".lang div").click(function(){
@@ -73,3 +71,18 @@ $(document).ready(function(){
 
 
 }); //ready
+
+
+
+$(".tab li").click(function(){
+    console.log($(this).index());
+
+    var i = $(this).index();
+
+    $(".tab li").removeClass("active");
+    $(this).addClass("active");
+
+    // $(".content div").hide();
+    // $(".content div").eq(i).show();
+    $(".content div").hide().eq(i).show();
+});
