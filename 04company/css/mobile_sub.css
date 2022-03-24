@@ -39,11 +39,7 @@
       .toggle.active .bar3{transform: rotate(-45deg)  translateY(0);}
 
       /* visual */
-    .visualWrap{height: 85vh;}
-    .visualWrap .sImg{height: 85vh;min-height: initial;}
-    .visualWrap .bx-wrapper .bx-pager{bottom:10px}
-    .visualWrap .txtBody{text-align: left;transform: translateY(0);}
-    .visualWrap .bx-controls{display: none;}
+    .visualWrap{height: 80vh;}
 
 
 
